@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="Css/all.min.css">
+  <link rel="stylesheet" href="Css/bootstrap.min.css">
+  <link rel="stylesheet" href="Css/style.css">
+  <title>Users Reports</title>
+  <link rel="shortcut icon" href="istockphoto-1325438663-612x612.jpg" type="image/x-icon">
+</head>
+
+<body>
+  <main class="full-page d-flex">
+    <div class="sidebar p-3 p-md-4" id="sidebar">
+    </div>
+    <div class="main-content d-flex flex-column">
+      <div class="head" id="head">
+        <div class="logo">
+          <img src="istockphoto-1325438663-612x612.jpg" alt="Logo" class="d-inline-block">
+        </div>
+        <div class="info">
+          <span class="p-1 mx-1" id="adminRole">Admin</span>
+          <span class="p-1 mx-1" id="employeeRole">Employee</span>
+          <i class="fa-regular fa-bell fa-lg mx-1"></i>
+          <img src="images/avatar.png" alt="" data-bs-toggle="collapse" data-bs-target="#userControl">
+          <div class="collapse" id="userControl">
+            <a href="profile.html">
+              <p>Profile</p>
+            </a>
+            <a href="settings.html">
+              <p>Settings</p>
+            </a>
+            <a href="#">
+              <p>attendance</p>
+            </a>
+            <a href="login.html">
+              <p>Logout</p>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="page-title">
+        <h3>Users Reports</h3>
+      </div>
+      <div class="accordion" id="accordion-container">
+        <div class="d-flex flex-wrap p-1 gap-2">
+          <div class="accordion-item ">
+            <h2 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                data-bs-target="#fullreport" aria-expanded="true" aria-controls="fullreport">
+                Full Reports
+              </button>
+            </h2>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#latereport" aria-expanded="true" aria-controls="latereport">
+                <i class="fa-solid fa-user-lock fa-fw"></i>Late Reports
+              </button>
+            </h2>
+          </div>
+          <div class="accordion-item ">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#banuser-container" aria-expanded="false" aria-controls="banuser-container">
+                <i class="fa-solid fa-user-slash fa-fw"></i>Excuse Reports
+              </button>
+            </h2>
+          </div>
+        </div>
+
+        <div id="fullreport" class="accordion-collapse collapse show " data-bs-parent="#accordion-container">
+          <div class="accordion-body table-responsive">
+            <div class="row align-items-center">
+              <div class="input-group">
+                <span class="input-group-text">From:</span>
+                <input type="date" class="form-control" id="startDate" name="startDate" min="2022-01-01">
+                </div>
+              <div class="input-group">
+                <span class="input-group-text">To:</span>
+                <input type="date" class="form-control" id="endDate" name="endDate" min="2022-01-01">
+              </div>
+              <button class="btn btn-outline-primary px-3 col-3 col-xl-1" id="getInfo">Get Info</button>
+            </div>
+            <table class="table w-100 collapsing collapse-horizontal text-center" id="fullreport-table">
+              <thead>
+                <tr>
+                  <th>Employee</th>
+                  <th>Name</th>
+                  <th>UserName</th>
+                  <th>Attended </th>
+                  <th>Absent</th>
+                  <th>Hire Date</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+        <div id="latereport" class="accordion-collapse collapse" data-bs-parent="#accordion-container">
+          <div class="accordion-body table-responsive">
+            <table class="table container" id="lateTable">
+              <tr class=" text-center">
+                <th>Name</th>
+                <th>
+                  User Name 
+                </th>
+                <th>
+                  Over All late
+                </th>
+                <th>
+                  Late Days
+                </th>
+                <th>
+                  Last Day late
+                </th>
+                <th>
+                  Last Day Date
+                </th>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div id="banuser-container" class="accordion-collapse collapse" data-bs-parent="#accordion-container">
+          <div class="accordion-body table-responsive">
+            <table class="table container table-striped" id="excusetable">
+              <thead>
+                <tr class="mx-auto text-center">
+                  <th>Name</th>
+                  <th>
+                    Excuse Days
+                  </th>
+                  <th>
+                    Accepted
+                  </th>
+                  <th>
+                    Rejected
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main> 
+  <script src="Js/bootstrap.bundle.min.js"></script>
+  <script src="Js/dashboard.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="Css/all.min.css">
+  <link rel="stylesheet" href="Css/bootstrap.min.css">
+  <link rel="stylesheet" href="Css/style.css">
+  <title>Settings</title>
+  <link rel="shortcut icon" href="istockphoto-1325438663-612x612.jpg" type="image/x-icon">
+</head>
+<body>
+  <main class="full-page d-flex">
+    <div class="sidebar p-3 p-md-4" id="sidebar">
+    </div>
+    <div class="main-content">
+      <div class="head" id="head">
+      </div>
+      <div class="page-title">
+        <h3>Settings</h3>
+      </div>
+      <div class="content">
+        <div class="row mx-0 p-4 gap-5 gap-md-2 justify-content-center">
+          <div class="card col-9 p-3">
+            <div class="container">
+              <h3>Password</h3>
+              <p class="btn btn-outline-primary my-3" data-bs-toggle="collapse" data-bs-target="#newPasswordCollapse">Change You Password</p>
+              <div class="collapse" id="newPasswordCollapse">
+                <div>
+                  <label for="password" class="form-label">Old Password</label>
+                  <input type="password" class="form-control" name="old-password">
+                </div>
+                <div>
+                  <label for="password" class="form-label">New Password</label>
+                  <input type="password" class="form-control" name="new-password">
+                </div>
+                <div>
+                  <label for="confirm-password" class="form-label">Confirm Password</label>
+                  <input type="password" class="form-control" name="confirm-password">
+                </div>
+                <button class="btn btn-outline-success px-5 my-2 mx-auto d-block" id="changePassword">Change</button>
+              </div>
+            </div>
+            <div class="container">
+              <h3>Address</h3>
+              <p class="btn btn-outline-primary my-3" data-bs-toggle="collapse" data-bs-target="#newAddressCollapse">
+                Change YourAddress
+              </p>
+              <div class="collapse" id="newAddressCollapse">
+                <div>
+                  <label for="address" class="form-label">New Address</label>
+                  <input type="text" class="form-control" id="newAddress">
+                </div>
+                <button class="btn btn-outline-success px-5 my-2 mx-auto d-block" id="changeAddress">Change</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+  <script src="Js/bootstrap.bundle.min.js"></script>
+  <script src="Js/dashboard.js"></script>
+</body>
+</html>
